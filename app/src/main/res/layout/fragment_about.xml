@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00EC1E1E"
+    tools:context=".main.About">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tou_hea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/tou_hea"
+            android:textColor="#000000"
+            android:textSize="22sp"
+            android:layout_marginLeft="30dp" />
+
+        <TextView
+            android:id="@+id/tou_det1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginEnd="25dp"
+            android:justificationMode="inter_word"
+            android:lineSpacingExtra="7dp"
+            android:text="@string/terms_of_use_details1"
+            android:textAlignment="gravity"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="25dp" />
+    </LinearLayout>
+
+
+</ScrollView>

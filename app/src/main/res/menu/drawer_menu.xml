@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_mygroups"
+            android:icon="@drawable/ic_group_work_black_24dp"
+            android:title="MyGroups"></item>
+        <item
+            android:id="@+id/nav_mybuddies"
+            android:icon="@drawable/ic_group_black_24dp"
+            android:title="MyBuddies"></item>
+        <item
+            android:id="@+id/nav_explore"
+            android:icon="@drawable/ic_search_black_24dp"
+            android:title="Explore"></item>
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_power_settings_new_black_24dp"
+            android:title="Logout"></item>
+        <item android:title="Communicate">
+            <menu>
+                <item
+                    android:id="@+id/nav_abt_us"
+                    android:icon="@drawable/ic_info_outline_black_24dp"
+                    android:title="About"
+                    app:showAsAction="always" />
+
+                <item
+                    android:id="@+id/nav_contact_us"
+                    android:icon="@drawable/ic_contact_black_24dp"
+                    android:title="Contact" />
+            </menu>
+        </item>
+
+    </group>
+</menu>
