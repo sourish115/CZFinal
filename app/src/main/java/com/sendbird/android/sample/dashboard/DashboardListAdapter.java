@@ -13,7 +13,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.sendbird.android.SendBird;
 import com.sendbird.android.sample.R;
-import com.sendbird.android.sample.main.SettingsActivity;
 import com.sendbird.android.sample.utils.ImageUtils;
 
 import java.util.ArrayList;
@@ -21,7 +20,6 @@ import java.util.List;
 
 class DashboardListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
 
-    //private List<String> PostList;
     private List<PostsDataModel> possst;
 
     private Context mContext;
@@ -40,7 +38,6 @@ class DashboardListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     DashboardListAdapter(Context context) {
 
         mContext = context;
-        //PostList =new ArrayList<>();
         possst = new ArrayList<>();
     }
 
@@ -72,17 +69,11 @@ class DashboardListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     }
 
     public void load(){
-        PostsDataModel temp = new PostsDataModel("Sourish","Hello people","R.drawable.ic");
+        PostsDataModel temp = new PostsDataModel("Sourish","Hello people! Hope you all are doing well.","R.drawable.ic");
         try{
             possst.clear();
             possst.add(temp);
             possst.add(temp);
-//            PostList.clear();
-//            PostList.add("Sourish");
-//            PostList.add("Hello");
-//            PostList.add("Hello");
-//            PostList.add("Hello");
-//            PostList.add("Hello");
             Log.d("LIST:",possst.get(0).getName());
             Log.d("LIST:",possst.get(1).toString());
             notifyDataSetChanged();
@@ -112,7 +103,6 @@ class DashboardListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
             if (profileUrl.length() > 0) {
                 ImageUtils.displayRoundImageFromUrl(context, profileUrl, img);
             }
-            //img.setImageResource(SendBird.getCurrentUser().get);
             // Set an OnClickListener to this item.
             if (clickListener != null) {
                 itemView.setOnClickListener(new View.OnClickListener() {
