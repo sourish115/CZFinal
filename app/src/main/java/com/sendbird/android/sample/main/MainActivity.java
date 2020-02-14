@@ -14,9 +14,6 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -26,6 +23,7 @@ import com.google.firebase.iid.InstanceIdResult;
 import com.sendbird.android.SendBird;
 import com.sendbird.android.SendBirdException;
 import com.sendbird.android.sample.R;
+import com.sendbird.android.sample.dashboard.dashboard;
 import com.sendbird.android.sample.groupchannel.GroupChannelActivity;
 import com.sendbird.android.sample.openchannel.OpenChannelActivity;
 import com.sendbird.android.sample.utils.PreferenceUtils;
@@ -37,7 +35,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dashboard);
+        setContentView(R.layout.activity_landing);
 
 
         FirebaseInstanceId.getInstance().getInstanceId()
@@ -197,6 +195,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_abt_us :
                 getSupportFragmentManager().beginTransaction().replace(R.id.frag, new About()).commit();
                 // getSupportFragmentManager().beginTransaction().replace(R.id.frag,new About()).commit();
+                break;
+
+            case R.id.nav_dashboard :
+                intent = new Intent(MainActivity.this, dashboard.class);
+                startActivity(intent);
                 break;
 
 

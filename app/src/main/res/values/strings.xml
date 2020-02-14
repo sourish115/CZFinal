@@ -87,7 +87,8 @@
     If you do not want to agree to these or any updated Terms, you can delete your account.\n\n
 
 
-</string><string name="tou_hea">Terms Of Use</string>
+</string>
+    <string name="tou_hea">Terms Of Use</string>
 
 
 </resources>
