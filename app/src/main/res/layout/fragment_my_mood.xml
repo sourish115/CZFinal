@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:id="@+id/label1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="30dp"
+        android:text="~Track Your Mood~" />
+
+    <TextView
+        android:id="@+id/happy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+
+        android:drawableLeft="@drawable/ic_mood_black_24dp"
+        android:text="      HAPPY" />
+
+    <TextView
+        android:id="@+id/SAD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+
+        android:drawableLeft="@drawable/ic_mood_bad_black_24dp"
+        android:text="      SAD" />
+
+    <TextView
+        android:id="@+id/amazing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+
+        android:drawableLeft="@drawable/ic_sentiment_very_satisfied_black_24dp"
+        android:text="      AMAZING" />
+
+    <TextView
+        android:id="@+id/awful"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+
+        android:drawableLeft="@drawable/ic_sentiment_very_dissatisfied_black_24dp"
+        android:text="      AWWFUL" />
+
+    <TextView
+        android:id="@+id/bleh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+
+        android:drawableLeft="@drawable/ic_sentiment_neutral_black_24dp"
+        android:text="      BLEH" />
+
+
+</LinearLayout>
