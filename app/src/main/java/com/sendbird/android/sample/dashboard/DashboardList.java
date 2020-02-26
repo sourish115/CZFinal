@@ -19,15 +19,17 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.sendbird.android.SendBird;
 import com.sendbird.android.sample.R;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link DashboardList.OnFragmentInteractionListener} interface
+ * {@link DashboardList} interface
  * to handle interaction events.
  * Use the {@link DashboardList#newInstance} factory method to
  * create an instance of this fragment.
@@ -101,6 +103,9 @@ public class DashboardList extends Fragment {
         mRecyclerView = (RecyclerView) rootView.findViewById(R.id.recycler_group_channel_list);
         mPostInput = rootView.findViewById(R.id.post_input);
         mPostButton = rootView.findViewById(R.id.post_button);
+
+        mChannelListAdapter = new DashboardListAdapter(getActivity());
+        mChannelListAdapter.load();
         //mCreateChannelFab = (FloatingActionButton) rootView.findViewById(R.id.fab_group_channel_list);
         mSwipeRefresh = (SwipeRefreshLayout) rootView.findViewById(R.id.swipe_layout_group_channel_list);
 
@@ -112,8 +117,7 @@ public class DashboardList extends Fragment {
             }
         });
 
-        mChannelListAdapter = new DashboardListAdapter(getActivity());
-        mChannelListAdapter.load();
+
         mPostButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -121,7 +125,7 @@ public class DashboardList extends Fragment {
                     Log.e("NoInput", "onClick: ");
                 }
                 else{
-                    InpObj = new PostsDataModel("Mehak",mPostInput.getText().toString(),"R.id.ic_sentiment_very_satisfied_black_24dp");
+                    InpObj = new PostsDataModel(SendBird.getCurrentUser().getNickname().toString(),mPostInput.getText().toString(),SendBird.getCurrentUser().getProfileUrl(),new Date());
                     mChannelListAdapter.addLast(InpObj);
                 }
             }
@@ -188,14 +192,7 @@ public class DashboardList extends Fragment {
     }
 
     private void refreshItemList(){
-        List<PostsDataModel> list = new ArrayList<>();
-        list.equals(mChannelListAdapter);
-//        list.add("Hello");
-//        list.add("Hello");
-//        list.add("Hello");
-//        list.add("Hello");
-//        list.add("Hello");
-        mChannelListAdapter.setGroupChannelList(list);
+        mChannelListAdapter.load();
         if (mSwipeRefresh.isRefreshing()) {
             mSwipeRefresh.setRefreshing(false);
         }
