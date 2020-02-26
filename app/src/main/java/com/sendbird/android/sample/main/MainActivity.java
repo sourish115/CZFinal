@@ -202,6 +202,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(intent);
                 break;
 
+            case R.id.nav_mood :
+                getSupportFragmentManager().beginTransaction().replace(R.id.frag, new MyMood()).commit();
+                break;
+
 
         }
         drawer.closeDrawer(GravityCompat.START);

@@ -19,10 +19,18 @@
     <string name="blocked_members_list">Blocked members</string>
 
     <!-- login -->
-    <string name="login_user_id">User ID</string>
-    <string name="login_user_nickname">Nickname</string>
+    <string name="login_user_name">     User Name</string>
+    <string name="login_user_nickname">     Nickname</string>
     <string name="login_connect">Login</string>
     <string name="login_disconnect">Logout</string>
+    <string name="login_password">      Password</string>
+
+    <!-- signup -->
+    <string name="signup_user_name">        User Name</string>
+    <string name="signup_user_nickname">        Nickname</string>
+    <string name="signup_connect">Sign up</string>
+    <string name="signup_disconnect">Logout</string>
+
 
     <!-- Open Channel List -->
     <string name="open_channel_list_participant_count">%1$d users online</string>
@@ -48,6 +56,17 @@
 
     <!-- Menu actions -->
     <string name="action_create_channel">Start chatting!</string>
+
+    <!-- calendar -->
+    <string name="current_date">February, 2020</string>
+    <string name="sun">S</string>
+    <string name="mon">M</string>
+    <string name="tue">T</string>
+    <string name="wed">W</string>
+    <string name="thu">T</string>
+    <string name="fri">F</string>
+    <string name="sat">S</string>
+    <string name="last_date">30</string>
 
     <string name="download">Download</string>
     <string name="cancel">Cancel</string>
@@ -89,6 +108,10 @@
 
 </string>
     <string name="tou_hea">Terms Of Use</string>
+
+    <!-- About Page-->
+
+
 
 
 </resources>

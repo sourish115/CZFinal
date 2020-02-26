@@ -20,17 +20,22 @@
                 android:id="@+id/post_input"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
                 android:layout_weight="1"
+                android:background="@drawable/edit_text_round"
+                android:drawableRight="@drawable/ic_attach_file_black_24dp"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:text="Name"
+                android:hint="How was your day?"
+                android:inputType="textMultiLine"
+                android:padding="10dp"
                 android:textColor="@android:color/black" />
 
             <Button
                 android:id="@+id/post_button"
-                android:layout_width="wrap_content"
+                android:layout_width="10dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:layout_marginTop="15dp"
                 android:text="Post" />
 
         </LinearLayout>

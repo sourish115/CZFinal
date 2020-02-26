@@ -1,6 +1,9 @@
 package com.sendbird.android.sample.main;
 
 import android.content.Context;
+import java.util.Calendar;
+
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -9,8 +12,15 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
+import com.applandeo.materialcalendarview.CalendarView;
+import com.applandeo.materialcalendarview.EventDay;
+import com.applandeo.materialcalendarview.listeners.OnDayClickListener;
 import com.sendbird.android.sample.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -29,6 +39,8 @@ public class MyMood extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    CalendarView calendarView;
 
     private OnFragmentInteractionListener mListener;
 
@@ -67,7 +79,29 @@ public class MyMood extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_my_mood, container, false);
+
+        View rootview = inflater.inflate(R.layout.fragment_my_mood, container, false);
+        List<EventDay> events = new ArrayList<>();
+
+//        Calendar calendar = Calendar.getInstance();
+//        events.add(new EventDay(calendar, R.drawable.ic_attach_file_black_24dp));
+
+        calendarView = rootview.findViewById(R.id.calendarView);
+
+        calendarView.setEvents(events);
+
+
+        calendarView.setOnDayClickListener(eventDay -> {
+            Calendar clickedDayCalendar = eventDay.getCalendar();
+            Calendar calendar = clickedDayCalendar.getInstance();
+            calendar.setTime(clickedDayCalendar.getTime());
+            events.add(new EventDay(calendar, R.drawable.ic_attach_file_black_24dp, Color.parseColor("#228B22")));
+            calendarView.setEvents(events);
+            Toast.makeText(getContext(),eventDay.getCalendar().getTime().toString(),Toast.LENGTH_LONG).show();
+        });
+
+        return rootview;
+
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -77,22 +111,7 @@ public class MyMood extends Fragment {
         }
     }
 
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        if (context instanceof OnFragmentInteractionListener) {
-            mListener = (OnFragmentInteractionListener) context;
-        } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
-        }
-    }
 
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        mListener = null;
-    }
 
     /**
      * This interface must be implemented by activities that contain this

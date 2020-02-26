@@ -60,32 +60,49 @@
             android:imeOptions="actionNext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="          Username"
+            android:hint="@string/signup_user_name"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/ic_person_black_24dp"
             android:inputType="textVisiblePassword"
             android:padding="15dp" />
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edittext_login_user_nickname"
-            android:imeOptions="actionDone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            android:drawableLeft="@android:drawable/ic_dialog_email"
+            android:drawableLeft="@drawable/ic_person_outline_black_24dp"
             android:drawableTint="#505050"
-            android:hint="   Email"
-            android:inputType="textVisiblePassword"
+            android:background="@android:color/transparent"
+            android:hint="@string/signup_user_nickname"
+            android:imeOptions="actionDone"
+
             android:padding="15dp" />
+
+        <EditText
+            android:id="@+id/sign_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:drawableLeft="@android:drawable/ic_lock_idle_lock"
+            android:drawableTint="#505050"
+            android:hint="@string/login_password"
+            android:background="@android:color/transparent"
+            android:inputType="textPassword"
+            android:padding="15dp"
+            android:autofillHints="" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_login_connect"
-            android:text="@string/login_connect"
+            android:text="@string/signup_connect"
             style="@style/Widget.AppCompat.Button.Colored"
             app:theme="@style/AppTheme.ButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="56dp"
+            android:gravity="center"
             android:layout_marginTop="44dp"
             android:stateListAnimator="@null"
-            android:background="@drawable/btn_purple">
+            android:background="@drawable/button">
         </androidx.appcompat.widget.AppCompatButton>
 
 

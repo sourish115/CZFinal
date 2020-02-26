@@ -6,6 +6,10 @@
 
     <group android:checkableBehavior="single">
         <item
+            android:id="@+id/nav_dashboard"
+            android:title="Dashboard"
+            android:icon="@drawable/ic_home_black_24dp"/>
+        <item
             android:id="@+id/nav_mygroups"
             android:icon="@drawable/ic_group_work_black_24dp"
             android:title="MyGroups"/>
@@ -14,6 +18,10 @@
             android:icon="@drawable/ic_group_black_24dp"
             android:title="MyBuddies"/>
         <item
+            android:id="@+id/nav_mood"
+            android:icon="@drawable/ic_date_range_black_24dp"
+            android:title="MyMood"></item>
+        <item
             android:id="@+id/nav_explore"
             android:icon="@drawable/ic_search_black_24dp"
             android:title="Explore"/>
@@ -21,10 +29,7 @@
             android:id="@+id/nav_logout"
             android:icon="@drawable/ic_power_settings_new_black_24dp"
             android:title="Logout"/>
-        <item
-            android:id="@+id/nav_dashboard"
-            android:title="Dashboard"
-            android:icon="@drawable/ic_power_settings_new_black_24dp"/>
+
         <item android:title="Communicate">
             <menu>
                 <item
