@@ -14,6 +14,9 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -26,12 +29,15 @@ import com.sendbird.android.sample.R;
 import com.sendbird.android.sample.dashboard.dashboard;
 import com.sendbird.android.sample.groupchannel.GroupChannelActivity;
 import com.sendbird.android.sample.openchannel.OpenChannelActivity;
+import com.sendbird.android.sample.utils.ImageUtils;
 import com.sendbird.android.sample.utils.PreferenceUtils;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, About.OnFragmentInteractionListener{
 
     //private Toolbar mToolbar;
     private DrawerLayout drawer;
+    private TextView tv;
+    private ImageView profpic;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,6 +66,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         drawer = findViewById(R.id.drawer);
         NavigationView navigationView = findViewById(R.id.nav_view);
+        tv = navigationView.getHeaderView(0).findViewById(R.id.profname);
+        tv.setText(SendBird.getCurrentUser().getNickname());
+        profpic = navigationView.getHeaderView(0).findViewById(R.id.profpic);
+        ImageUtils.displayRoundImageFromUrl(getApplicationContext(),SendBird.getCurrentUser().getProfileUrl(),profpic);
         navigationView.setNavigationItemSelectedListener(this);
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawer,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);

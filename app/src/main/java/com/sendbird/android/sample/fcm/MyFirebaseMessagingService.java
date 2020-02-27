@@ -152,8 +152,9 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(context, CHANNEL_ID)
                 .setSmallIcon(R.drawable.img_notification)
                 .setColor(Color.parseColor("#7469C4"))  // small icon background color
-                .setLargeIcon(BitmapFactory.decodeResource(context.getResources(), R.drawable.img_notification_large))
-                .setContentTitle(context.getResources().getString(R.string.app_name))
+                .setLargeIcon(BitmapFactory.decodeResource(context.getResources(), R.drawable.logo))
+                //.setContentTitle(context.getResources().getString(R.string.app_name))
+                .setContentTitle(channelUrl)
                 .setAutoCancel(true)
                 .setSound(defaultSoundUri)
                 .setPriority(Notification.PRIORITY_MAX)
