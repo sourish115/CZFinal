@@ -66,10 +66,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         drawer = findViewById(R.id.drawer);
         NavigationView navigationView = findViewById(R.id.nav_view);
-        tv = navigationView.getHeaderView(0).findViewById(R.id.profname);
-        tv.setText(SendBird.getCurrentUser().getNickname());
-        profpic = navigationView.getHeaderView(0).findViewById(R.id.profpic);
-        ImageUtils.displayRoundImageFromUrl(getApplicationContext(),SendBird.getCurrentUser().getProfileUrl(),profpic);
+        if(SendBird.getCurrentUser()!=null){
+            tv = navigationView.getHeaderView(0).findViewById(R.id.profname);
+            tv.setText(SendBird.getCurrentUser().getNickname());
+            profpic = navigationView.getHeaderView(0).findViewById(R.id.profpic);
+            ImageUtils.displayRoundImageFromUrl(getApplicationContext(),SendBird.getCurrentUser().getProfileUrl(),profpic);
+        }
+
         navigationView.setNavigationItemSelectedListener(this);
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawer,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);

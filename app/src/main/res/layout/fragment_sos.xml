@@ -32,16 +32,17 @@
             android:background="@drawable/background_transparent"
             android:layout_marginTop="39dp"
             android:layout_marginLeft="20dp"
-            ></EditText>
+            />
 
         <EditText
             android:id="@+id/num1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="@string/number"
+
+            android:text="7411083336"
             android:background="@drawable/background_transparent"
             android:layout_marginTop="39dp"
-            android:layout_marginLeft="40dp"></EditText>
+            android:layout_marginLeft="40dp"/>
 
         <ImageButton
             android:id="@+id/call1"
@@ -50,7 +51,7 @@
 
             android:layout_marginLeft="50dp"
             android:layout_marginTop="30dp"
-            app:srcCompat="@drawable/ic_contact_black_24dp"></ImageButton>
+            app:srcCompat="@drawable/ic_contact_black_24dp"/>
 
 
 
@@ -69,7 +70,7 @@
             android:background="@drawable/background_transparent"
             android:layout_marginTop="39dp"
             android:layout_marginLeft="20dp"
-            ></EditText>
+            />
 
         <EditText
             android:id="@+id/num2"
@@ -78,7 +79,7 @@
             android:hint="@string/number"
             android:background="@drawable/background_transparent"
             android:layout_marginTop="39dp"
-            android:layout_marginLeft="40dp"></EditText>
+            android:layout_marginLeft="40dp"/>
         <ImageButton
             android:id="@+id/call2"
             android:layout_width="wrap_content"
@@ -86,7 +87,7 @@
 
             android:layout_marginLeft="50dp"
             android:layout_marginTop="30dp"
-            app:srcCompat="@drawable/ic_contact_black_24dp"></ImageButton>
+            app:srcCompat="@drawable/ic_contact_black_24dp"/>
 
 
 
