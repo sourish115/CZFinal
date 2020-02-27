@@ -12,6 +12,8 @@
 
     <style name="Toolbar" parent="ThemeOverlay.AppCompat.Dark">
         <item name="android:textColorPrimary">#ffffff</item>
+        <item name="android:textSize">25dp</item>
+        <item name="android:fontFamily">@font/josefin_sans</item>
     </style>
 
     <style name="AppTheme.ButtonStyle" parent="ThemeOverlay.AppCompat">

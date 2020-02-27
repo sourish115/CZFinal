@@ -65,6 +65,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawer,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
         drawer.addDrawerListener((DrawerLayout.DrawerListener) toggle);
         toggle.syncState();
+        getSupportFragmentManager().beginTransaction().replace(R.id.frag, new MyMood()).commit();
 
 //        mToolbar = (Toolbar) findViewById(R.id.toolbar_main);
 //        setSupportActionBar(mToolbar);
@@ -204,6 +205,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             case R.id.nav_mood :
                 getSupportFragmentManager().beginTransaction().replace(R.id.frag, new MyMood()).commit();
+                break;
+
+            case R.id.nav_sos :
+                getSupportFragmentManager().beginTransaction().replace(R.id.frag,new Sos()).commit();
                 break;
 
 

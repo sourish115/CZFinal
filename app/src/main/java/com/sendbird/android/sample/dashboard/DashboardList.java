@@ -102,6 +102,7 @@ public class DashboardList extends Fragment {
 
         mRecyclerView = (RecyclerView) rootView.findViewById(R.id.recycler_group_channel_list);
         mPostInput = rootView.findViewById(R.id.post_input);
+        mPostInput.setText(null);
         mPostButton = rootView.findViewById(R.id.post_button);
 
         mChannelListAdapter = new DashboardListAdapter(getActivity());
@@ -117,16 +118,22 @@ public class DashboardList extends Fragment {
             }
         });
 
-
+        if(mPostInput.getText().equals("") || mPostInput.getText().equals(null)){
+            mPostButton.setEnabled(false);
+        }
+        else
+            mPostButton.setEnabled(true);
         mPostButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(mPostInput.getText().equals("")){
+                if(mPostInput.getText().equals("") || mPostInput.getText().equals(null)){
                     Log.e("NoInput", "onClick: ");
+                    Toast.makeText(getContext(),"Please write something!",Toast.LENGTH_LONG).show();
                 }
                 else{
                     InpObj = new PostsDataModel(SendBird.getCurrentUser().getNickname().toString(),mPostInput.getText().toString(),SendBird.getCurrentUser().getProfileUrl(),new Date());
                     mChannelListAdapter.addLast(InpObj);
+                    mPostInput.setText(null);
                 }
             }
         });

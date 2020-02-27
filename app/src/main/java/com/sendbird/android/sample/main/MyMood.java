@@ -1,5 +1,6 @@
 package com.sendbird.android.sample.main;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import java.util.Calendar;
 
@@ -94,14 +95,47 @@ public class MyMood extends Fragment {
         calendarView.setOnDayClickListener(eventDay -> {
             Calendar clickedDayCalendar = eventDay.getCalendar();
             Calendar calendar = clickedDayCalendar.getInstance();
-            calendar.setTime(clickedDayCalendar.getTime());
-            events.add(new EventDay(calendar, R.drawable.ic_attach_file_black_24dp, Color.parseColor("#228B22")));
-            calendarView.setEvents(events);
-            Toast.makeText(getContext(),eventDay.getCalendar().getTime().toString(),Toast.LENGTH_LONG).show();
+            showMessageOptionsDialog(calendarView,calendar,clickedDayCalendar,events);
+            //Toast.makeText(getContext(),eventDay.getCalendar().getTime().toString(),Toast.LENGTH_LONG).show();
         });
 
         return rootview;
 
+    }
+
+
+    private void showMessageOptionsDialog(CalendarView cv, Calendar cal,Calendar ccal ,List<EventDay> ed) {
+        String[] options = new String[] { "Happy", "Sad" ,"Amazing","Awful","Bleh"};
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setItems(options, (dialog, which) -> {
+            if (which == 0) {
+                cal.setTime(ccal.getTime());
+                ed.add(new EventDay(cal, R.drawable.ic_mood_black_24dp, Color.parseColor("#228B22")));
+                cv.setEvents(ed);
+
+            } else if (which == 1) {
+                cal.setTime(ccal.getTime());
+                ed.add(new EventDay(cal, R.drawable.ic_mood_bad_black_24dp, Color.parseColor("#228B22")));
+                cv.setEvents(ed);
+            }
+            else if (which == 2) {
+                cal.setTime(ccal.getTime());
+                ed.add(new EventDay(cal, R.drawable.ic_sentiment_very_satisfied_black_24dp, Color.parseColor("#228B22")));
+                cv.setEvents(ed);
+            }
+            else if (which == 3) {
+                cal.setTime(ccal.getTime());
+                ed.add(new EventDay(cal, R.drawable.ic_sentiment_very_dissatisfied_black_24dp, Color.parseColor("#228B22")));
+                cv.setEvents(ed);
+            }
+            else if (which == 4) {
+                cal.setTime(ccal.getTime());
+                ed.add(new EventDay(cal, R.drawable.ic_sentiment_neutral_black_24dp, Color.parseColor("#228B22")));
+                cv.setEvents(ed);
+            }
+        });
+        builder.create().show();
     }
 
     // TODO: Rename method, update argument and hook method into UI event

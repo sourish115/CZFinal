@@ -14,7 +14,7 @@
     <!-- main -->
     <string name="main_drawer_open">Open navigation drawer</string>
     <string name="main_drawer_close">Close navigation drawer</string>
-    <string name="select_channel_type">Hello!</string>
+    <string name="select_channel_type">ComfortZone</string>
     <string name="settings">Settings</string>
     <string name="blocked_members_list">Blocked members</string>
 
@@ -24,6 +24,11 @@
     <string name="login_connect">Login</string>
     <string name="login_disconnect">Logout</string>
     <string name="login_password">      Password</string>
+
+    <!-- SOS page -->
+    <string name="sos_heading">Emergency Contact Details</string>
+    <string name="name">Name</string>
+    <string name="number">Contact Number</string>
 
     <!-- signup -->
     <string name="signup_user_name">        User Name</string>
@@ -110,8 +115,6 @@
     <string name="tou_hea">Terms Of Use</string>
 
     <!-- About Page-->
-
-
 
 
 </resources>

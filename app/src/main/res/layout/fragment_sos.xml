@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".main.Sos">
+
+
+    <TextView
+        android:id="@+id/tou_hea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:text="@string/sos_heading"
+        android:textColor="#000000"
+        android:textSize="22sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/name1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/name"
+            android:background="@drawable/background_transparent"
+            android:layout_marginTop="39dp"
+            android:layout_marginLeft="20dp"
+            ></EditText>
+
+        <EditText
+            android:id="@+id/num1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/number"
+            android:background="@drawable/background_transparent"
+            android:layout_marginTop="39dp"
+            android:layout_marginLeft="40dp"></EditText>
+
+        <ImageButton
+            android:id="@+id/call1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="30dp"
+            app:srcCompat="@drawable/ic_contact_black_24dp"></ImageButton>
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/name2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/name"
+            android:background="@drawable/background_transparent"
+            android:layout_marginTop="39dp"
+            android:layout_marginLeft="20dp"
+            ></EditText>
+
+        <EditText
+            android:id="@+id/num2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/number"
+            android:background="@drawable/background_transparent"
+            android:layout_marginTop="39dp"
+            android:layout_marginLeft="40dp"></EditText>
+        <ImageButton
+            android:id="@+id/call2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="30dp"
+            app:srcCompat="@drawable/ic_contact_black_24dp"></ImageButton>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/name3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/name"
+            android:background="@drawable/background_transparent"
+            android:layout_marginTop="39dp"
+            android:layout_marginLeft="20dp"
+            ></EditText>
+
+        <EditText
+            android:id="@+id/num3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/number"
+            android:background="@drawable/background_transparent"
+            android:layout_marginTop="39dp"
+            android:layout_marginLeft="40dp"></EditText>
+
+        <ImageButton
+            android:id="@+id/call3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="30dp"
+            app:srcCompat="@drawable/ic_contact_black_24dp"></ImageButton>
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
