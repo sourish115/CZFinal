@@ -38,8 +38,7 @@
             android:id="@+id/num1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
-            android:text="7411083336"
+            android:hint="@string/number"
             android:background="@drawable/background_transparent"
             android:layout_marginTop="39dp"
             android:layout_marginLeft="40dp"></EditText>
